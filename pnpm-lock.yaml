@@ -9,8 +9,8 @@ importers:
   .:
     dependencies:
       '@quantfive/codepress-browser-extension':
-        specifier: 0.2.3-dev.20251001053056
-        version: 0.2.3-dev.20251001053056(@babel/runtime@7.28.4)(@fortawesome/fontawesome-svg-core@6.7.2)(@fortawesome/free-brands-svg-icons@6.7.2)(@fortawesome/pro-duotone-svg-icons@6.7.2)(@fortawesome/pro-light-svg-icons@6.7.2)(@fortawesome/pro-regular-svg-icons@6.7.2)(@fortawesome/pro-solid-svg-icons@6.7.2)(@fortawesome/pro-thin-svg-icons@6.7.2)(@fortawesome/react-fontawesome@0.2.6(@fortawesome/fontawesome-svg-core@6.7.2)(react@19.1.1))(@types/react-dom@19.1.9(@types/react@19.1.16))(@types/react@19.1.16)(react-dom@19.1.1(react@19.1.1))(react@19.1.1)(tailwindcss@4.1.13)
+        specifier: 0.2.3-dev.20251001053717
+        version: 0.2.3-dev.20251001053717(@babel/runtime@7.28.4)(@fortawesome/fontawesome-svg-core@6.7.2)(@fortawesome/free-brands-svg-icons@6.7.2)(@fortawesome/pro-duotone-svg-icons@6.7.2)(@fortawesome/pro-light-svg-icons@6.7.2)(@fortawesome/pro-regular-svg-icons@6.7.2)(@fortawesome/pro-solid-svg-icons@6.7.2)(@fortawesome/pro-thin-svg-icons@6.7.2)(@fortawesome/react-fontawesome@0.2.6(@fortawesome/fontawesome-svg-core@6.7.2)(react@19.1.1))(@types/react-dom@19.1.9(@types/react@19.1.16))(@types/react@19.1.16)(react-dom@19.1.1(react@19.1.1))(react@19.1.1)(tailwindcss@4.1.13)
       '@quantfive/codepress-engine':
         specifier: ^0.3.16
         version: 0.3.16(@babel/core@7.28.4)
@@ -593,8 +593,8 @@ packages:
     resolution: {integrity: sha512-nn5ozdjYQpUCZlWGuxcJY/KpxkWQs4DcbMCmKojjyrYDEAGy4Ce19NN4v5MduafTwJlbKc99UA8YhSVqq9yPZA==}
     engines: {node: '>=12.4.0'}
 
-  '@quantfive/codepress-browser-extension@0.2.3-dev.20251001053056':
-    resolution: {integrity: sha512-6Idp9yNnOD0B5OjPu7AWAm0vLvtSMumPp317LUQmu6hx9L8MQkNM3JjxUs4S80ykzp+UrxWLRbRIcMabi3+sHg==, tarball: https://npm.pkg.github.com/download/@quantfive/codepress-browser-extension/0.2.3-dev.20251001053056/2e06499b0eab4fc2b722c468f5d46cf643bd013b}
+  '@quantfive/codepress-browser-extension@0.2.3-dev.20251001053717':
+    resolution: {integrity: sha512-Sqr28WiKomitz2EMJcj2b5Id5kVJYMGgo3i8J45bY7aayMS+6L7yltemR/eX5rfWCLkF2fMXXMlW04OzI8RKfQ==, tarball: https://npm.pkg.github.com/download/@quantfive/codepress-browser-extension/0.2.3-dev.20251001053717/fca9952b4bca90b90b0d34dd279acd796285f79a}
     peerDependencies:
       '@fortawesome/fontawesome-svg-core': ^6.5.1
       '@fortawesome/free-brands-svg-icons': ^6.7.2
@@ -3830,7 +3830,7 @@ snapshots:
 
   '@nolyfill/is-core-module@1.0.39': {}
 
-  '@quantfive/codepress-browser-extension@0.2.3-dev.20251001053056(@babel/runtime@7.28.4)(@fortawesome/fontawesome-svg-core@6.7.2)(@fortawesome/free-brands-svg-icons@6.7.2)(@fortawesome/pro-duotone-svg-icons@6.7.2)(@fortawesome/pro-light-svg-icons@6.7.2)(@fortawesome/pro-regular-svg-icons@6.7.2)(@fortawesome/pro-solid-svg-icons@6.7.2)(@fortawesome/pro-thin-svg-icons@6.7.2)(@fortawesome/react-fontawesome@0.2.6(@fortawesome/fontawesome-svg-core@6.7.2)(react@19.1.1))(@types/react-dom@19.1.9(@types/react@19.1.16))(@types/react@19.1.16)(react-dom@19.1.1(react@19.1.1))(react@19.1.1)(tailwindcss@4.1.13)':
+  '@quantfive/codepress-browser-extension@0.2.3-dev.20251001053717(@babel/runtime@7.28.4)(@fortawesome/fontawesome-svg-core@6.7.2)(@fortawesome/free-brands-svg-icons@6.7.2)(@fortawesome/pro-duotone-svg-icons@6.7.2)(@fortawesome/pro-light-svg-icons@6.7.2)(@fortawesome/pro-regular-svg-icons@6.7.2)(@fortawesome/pro-solid-svg-icons@6.7.2)(@fortawesome/pro-thin-svg-icons@6.7.2)(@fortawesome/react-fontawesome@0.2.6(@fortawesome/fontawesome-svg-core@6.7.2)(react@19.1.1))(@types/react-dom@19.1.9(@types/react@19.1.16))(@types/react@19.1.16)(react-dom@19.1.1(react@19.1.1))(react@19.1.1)(tailwindcss@4.1.13)':
     dependencies:
       '@fortawesome/fontawesome-svg-core': 6.7.2
       '@fortawesome/free-brands-svg-icons': 6.7.2
