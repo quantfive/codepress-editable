@@ -1,6 +1,6 @@
 import "@/styles/globals.css";
+import "@quantfive/codepress-browser-extension/style";
 
-import { AuthProvider } from "@/lib/auth/context";
 import type { NextPage } from "next";
 import type { AppProps } from "next/app";
 import type { ReactElement, ReactNode } from "react";
@@ -17,5 +17,5 @@ export default function App({ Component, pageProps }: AppPropsWithLayout) {
   // Use the layout defined at the page level, if available
   const getLayout = Component.getLayout ?? ((page) => page);
 
-  return <AuthProvider>{getLayout(<Component {...pageProps} />)}</AuthProvider>;
+  return getLayout(<Component {...pageProps} />);
 }

@@ -1,6 +1,5 @@
 import { Button, buttonVariants } from "@/components/ui/button";
 import WaitlistModal from "@/components/waitlist-modal";
-import { useAuth } from "@/lib/auth/context";
 import { cn } from "@/lib/utils";
 import { Menu, X } from "lucide-react";
 import Image from "next/image";
@@ -79,26 +78,7 @@ const NavLinks = ({
 };
 
 const TrialButton = ({ isMobile = false }: { isMobile?: boolean }) => {
-  const { isLoggedIn } = useAuth();
   const [showWaitlist, setShowWaitlist] = useState(false);
-
-  if (isLoggedIn) {
-    return (
-      <Link href="/dashboard">
-        <Button
-          variant="trial"
-          className={cn(
-            "rounded-full h-auto",
-            isMobile
-              ? "w-full px-5 py-2.5"
-              : "hidden md:flex py-2.5 md:px-4 lg:px-5"
-          )}
-        >
-          Dashboard
-        </Button>
-      </Link>
-    );
-  }
 
   return (
     <>

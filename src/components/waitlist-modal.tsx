@@ -1,17 +1,16 @@
-import React, { useState } from "react";
+import { Button } from "@/components/ui/button";
 import {
   Dialog,
   DialogContent,
+  DialogDescription,
   DialogHeader,
   DialogTitle,
-  DialogDescription,
 } from "@/components/ui/dialog";
-import { Label } from "@/components/ui/label";
 import { Input } from "@/components/ui/input";
-import { Button } from "@/components/ui/button";
-import { submitWaitlist } from "@/lib/api";
+import { Label } from "@/components/ui/label";
 import { Loader2 } from "lucide-react";
 import Image from "next/image";
+import React, { useState } from "react";
 
 interface WaitlistModalProps {
   open: boolean;
@@ -46,15 +45,10 @@ export default function WaitlistModal({
     if (!email) return;
     setIsSubmitting(true);
     setMessage(null);
-    const result = await submitWaitlist(email, source);
     setIsSubmitting(false);
-    if (result.ok) {
-      setSubmitted(true);
-      setSubmittedEmail(email);
-      setMessage(null);
-    } else {
-      setMessage(result.message);
-    }
+    setSubmitted(true);
+    setSubmittedEmail(email);
+    setMessage(null);
   };
 
   return (

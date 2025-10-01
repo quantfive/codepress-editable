@@ -1,7 +1,4 @@
-"use client";
-
 import { CodePressEditor as Editor } from "@quantfive/codepress-browser-extension";
-import "@quantfive/codepress-browser-extension/style";
 import { useEffect, useState } from "react";
 
 export function CodePressEditor() {
@@ -9,6 +6,19 @@ export function CodePressEditor() {
 
   useEffect(() => {
     setMounted(true);
+  }, []);
+
+  useEffect(() => {
+    if (typeof window !== "undefined") {
+      try {
+        window.localStorage.setItem(
+          "codepress-editing-mode",
+          JSON.stringify(Boolean(true))
+        );
+      } catch {
+        // Ignore storage failures (e.g., SSR, private mode)
+      }
+    }
   }, []);
 
   // Don't render on server-side
@@ -24,7 +34,6 @@ export function CodePressEditor() {
   return (
     <Editor
       tokenProvider={tokenProvider}
-      autoSaveToCurrentBranch
       useShadow={true}
       protectedBranches={["main"]}
     />
