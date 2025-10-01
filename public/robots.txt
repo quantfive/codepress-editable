@@ -1,0 +1,4 @@
+# Prevent all search engines from indexing this demo site
+User-agent: *
+Disallow: /
+
