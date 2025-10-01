@@ -29,6 +29,7 @@ export const EXTENSION_CONFIG = {
     "http://localhost:3001",
     "http://localhost:3002",
     "https://codepress.dev",
+    "https://editable.codepress.dev",
   ],
 
   // Message authentication key (shared secret)

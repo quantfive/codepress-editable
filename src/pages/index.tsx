@@ -1,4 +1,5 @@
 import AdvantagesSection from "@/components/advantages-section";
+import { CodePressEditor } from "@/components/CodePressEditor";
 import FaqSection from "@/components/faq-section";
 import FeaturesSection from "@/components/features-section";
 import FinalSection from "@/components/final-section";
@@ -46,6 +47,7 @@ export default function Home() {
 
   return (
     <div className={`${geistSans.variable} ${geistMono.variable} font-sans`}>
+      <CodePressEditor />
       <Head>
         <title>{title}</title>
         <meta name="description" content={description} />
