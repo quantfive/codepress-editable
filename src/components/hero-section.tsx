@@ -24,7 +24,7 @@ export default function HeroSection() {
       <div className="container mx-auto px-4 py-12 md:py-16 relative z-10">
         <div className="max-w-4xl mx-auto flex flex-col items-center text-center gap-6 md:gap-7 lg:gap-8">
           <h1 className="text-3xl md:text-5xl lg:text-[64px] font-semibold tracking-[-1.92px] leading-tight lg:leading-[68px] bg-clip-text text-transparent bg-gradient-to-b from-black to-gray-700">
-            Edit your code visually. <br /> Ship without engineering.
+            The IDE for everyone else
           </h1>
           <p className="text-lg md:text-xl text-[#4b4b4b] max-w-4xl leading-7 max-w-[90%]">
             A CMS & visual editor that integrates seamlessly into your codebase
