@@ -1,14 +1,13 @@
-import React, { createContext, useContext, useEffect, useState } from "react";
-import { sendAuthUpdateViaPostMessage } from "@/lib/extension-bridge";
+import { fetchBackend } from "@/lib/api";
 import {
   getAuthToken,
-  setAuthToken,
-  removeAuthToken,
   getUserData,
-  setUserData,
+  removeAuthToken,
   removeUserData,
+  setAuthToken,
+  setUserData,
 } from "@/lib/utils";
-import { fetchBackend } from "@/lib/api";
+import React, { createContext, useContext, useEffect, useState } from "react";
 
 export interface User {
   id: string;
@@ -137,26 +136,6 @@ export function AuthProvider({ children }: { children: React.ReactNode }) {
     loadAuthState();
   }, []);
 
-  // Share credentials with Chrome extension when auth state changes
-  useEffect(() => {
-    const shareWithExtension = async () => {
-      try {
-        // Send auth update to extension via postMessage
-        sendAuthUpdateViaPostMessage({
-          token,
-          user,
-          isLoggedIn,
-        });
-      } catch (error) {
-        console.error("Error sharing credentials with extension:", error);
-      }
-    };
-
-    if (!loading) {
-      shareWithExtension();
-    }
-  }, [token, user, isLoggedIn, loading]);
-
   const login = async (authToken: string): Promise<User | null> => {
     // Persist token immediately so subsequent API calls are authenticated
     setToken(authToken);
@@ -180,13 +159,6 @@ export function AuthProvider({ children }: { children: React.ReactNode }) {
     // Clear localStorage
     removeAuthToken();
     removeUserData();
-
-    // Notify extension of logout
-    sendAuthUpdateViaPostMessage({
-      token: null,
-      user: null,
-      isLoggedIn: false,
-    });
 
     setUser(null);
   };
