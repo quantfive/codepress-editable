@@ -1,6 +1,11 @@
 import { CodePressEditor as Editor } from "@quantfive/codepress-browser-extension";
 import { useEffect, useState } from "react";
 
+const CODEPRESS_EDITOR_API_BASE_URL =
+  process.env.NODE_ENV === "production"
+    ? "https://api.codepress.dev/v1"
+    : "http://localhost:8007/v1";
+
 export function CodePressEditor() {
   const [mounted, setMounted] = useState(false);
 
@@ -35,6 +40,7 @@ export function CodePressEditor() {
     <Editor
       tokenProvider={tokenProvider}
       useShadow={true}
+      apiBaseUrl={CODEPRESS_EDITOR_API_BASE_URL}
       protectedBranches={["main"]}
     />
   );

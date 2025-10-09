@@ -12,8 +12,8 @@ importers:
         specifier: 0.2.7-dev.20251001073439
         version: 0.2.7-dev.20251001073439(@babel/runtime@7.28.4)(@fortawesome/fontawesome-svg-core@6.7.2)(@fortawesome/free-brands-svg-icons@6.7.2)(@fortawesome/pro-duotone-svg-icons@6.7.2)(@fortawesome/pro-light-svg-icons@6.7.2)(@fortawesome/pro-regular-svg-icons@6.7.2)(@fortawesome/pro-solid-svg-icons@6.7.2)(@fortawesome/pro-thin-svg-icons@6.7.2)(@fortawesome/react-fontawesome@0.2.6(@fortawesome/fontawesome-svg-core@6.7.2)(react@19.1.1))(@types/react-dom@19.1.9(@types/react@19.1.16))(@types/react@19.1.16)(react-dom@19.1.1(react@19.1.1))(react@19.1.1)(tailwindcss@4.1.13)
       '@quantfive/codepress-engine':
-        specifier: ^0.3.16
-        version: 0.3.16(@babel/core@7.28.4)
+        specifier: 0.3.18-dev.safe-directive.20251009082842
+        version: 0.3.18-dev.safe-directive.20251009082842(@babel/core@7.28.4)
       '@radix-ui/react-accordion':
         specifier: ^1.2.12
         version: 1.2.12(@types/react-dom@19.1.9(@types/react@19.1.16))(@types/react@19.1.16)(react-dom@19.1.1(react@19.1.1))(react@19.1.1)
@@ -607,8 +607,8 @@ packages:
       react: ^18.0.0 || ^19.0.0
       react-dom: ^18.0.0 || ^19.0.0
 
-  '@quantfive/codepress-engine@0.3.16':
-    resolution: {integrity: sha512-Y9YoPl/KDI2YuKLP9eJ5zINCEPtR0lUIWBwPtsGyA2jgPGgHbFzz73W+0Ai7cuyn09kicPF6J/0VQ2FlrMaR3Q==, tarball: https://npm.pkg.github.com/download/@quantfive/codepress-engine/0.3.16/64a5e7038894f2721098fa81f9b7122e18a1f4ec}
+  '@quantfive/codepress-engine@0.3.18-dev.safe-directive.20251009082842':
+    resolution: {integrity: sha512-GxI3rAndzLCkq94lYK53osCIXMyXCcJQZB3IMxKSvn2HsNxtedO+gWFUi1+N1sKL/xBXWmuJcHuVj0gvY+81Dg==, tarball: https://npm.pkg.github.com/download/@quantfive/codepress-engine/0.3.18-dev.safe-directive.20251009082842/83cc01e638e0f860fb61922af0054ef4306e87ba}
     hasBin: true
     peerDependencies:
       '@babel/core': ^7.0.0
@@ -3875,7 +3875,7 @@ snapshots:
       - supports-color
       - tailwindcss
 
-  '@quantfive/codepress-engine@0.3.16(@babel/core@7.28.4)':
+  '@quantfive/codepress-engine@0.3.18-dev.safe-directive.20251009082842(@babel/core@7.28.4)':
     dependencies:
       '@babel/core': 7.28.4
       '@fastify/cors': 11.1.0
