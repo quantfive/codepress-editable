@@ -8,6 +8,9 @@ importers:
 
   .:
     dependencies:
+      '@codepress/codepress-engine':
+        specifier: ^0.4.0
+        version: 0.4.0(@babel/core@7.28.4)
       '@quantfive/codepress-browser-extension':
         specifier: 0.2.7-dev.20251001073439
         version: 0.2.7-dev.20251001073439(@babel/runtime@7.28.4)(@fortawesome/fontawesome-svg-core@6.7.2)(@fortawesome/free-brands-svg-icons@6.7.2)(@fortawesome/pro-duotone-svg-icons@6.7.2)(@fortawesome/pro-light-svg-icons@6.7.2)(@fortawesome/pro-regular-svg-icons@6.7.2)(@fortawesome/pro-solid-svg-icons@6.7.2)(@fortawesome/pro-thin-svg-icons@6.7.2)(@fortawesome/react-fontawesome@0.2.6(@fortawesome/fontawesome-svg-core@6.7.2)(react@19.1.1))(@types/react-dom@19.1.9(@types/react@19.1.16))(@types/react@19.1.16)(react-dom@19.1.1(react@19.1.1))(react@19.1.1)(tailwindcss@4.1.13)
@@ -170,6 +173,12 @@ packages:
   '@babel/types@7.28.4':
     resolution: {integrity: sha512-bkFqkLhh3pMBUQQkpVgWDWq/lqzc2678eUyDlTBhRqhCHFguYYGM0Efga7tYk4TogG/3x0EEl66/OQ+WGbWB/Q==}
     engines: {node: '>=6.9.0'}
+
+  '@codepress/codepress-engine@0.4.0':
+    resolution: {integrity: sha512-MdKOoZobBeDbEfIKps7RHAN/F1/wFsz2a7ktJzB2bMopx4ZPjvnAjV+RgCaMA2KEm7HQnJZXTAVsVaUb4fc9mA==}
+    hasBin: true
+    peerDependencies:
+      '@babel/core': ^7.0.0
 
   '@emnapi/core@1.5.0':
     resolution: {integrity: sha512-sbP8GzB1WDzacS8fgNPpHlp6C9VZe+SJP3F90W9rLemaQj2PzIuTEl1qDOYQf58YIpyjViI24y9aPWCjEzY2cg==}
@@ -3413,6 +3422,19 @@ snapshots:
     dependencies:
       '@babel/helper-string-parser': 7.27.1
       '@babel/helper-validator-identifier': 7.27.1
+
+  '@codepress/codepress-engine@0.4.0(@babel/core@7.28.4)':
+    dependencies:
+      '@babel/core': 7.28.4
+      '@fastify/cors': 11.1.0
+      fastify: 5.6.1
+      node-fetch: 2.7.0
+      prettier: 3.6.2
+      ws: 8.18.3
+    transitivePeerDependencies:
+      - bufferutil
+      - encoding
+      - utf-8-validate
 
   '@emnapi/core@1.5.0':
     dependencies:

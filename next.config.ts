@@ -1,5 +1,4 @@
-// @ts-expect-error no types published for this module
-import createSWCPlugin from "@quantfive/codepress-engine/swc";
+import createSWCPlugin from "@codepress/codepress-engine/swc";
 import type { NextConfig } from "next";
 
 const nextConfig: NextConfig = {
