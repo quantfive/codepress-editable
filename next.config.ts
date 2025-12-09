@@ -15,6 +15,7 @@ const nextConfig: NextConfig = {
   reactStrictMode: true,
   transpilePackages: ["@quantfive/codepress-browser-extension"],
   webpack: (config, { isServer, dev }) => {
+    config.resolve.conditionNames = ["import", "module", "default"];
     config.plugins.push(new CodePressWebpackPlugin({ isServer, dev }));
     return config;
   },
@@ -29,10 +30,6 @@ const nextConfig: NextConfig = {
         hostname: "avatars.githubusercontent.com",
       },
     ],
-  },
-  webpack: (config) => {
-    config.resolve.conditionNames = ["import", "module", "default"];
-    return config;
   },
 };
 
