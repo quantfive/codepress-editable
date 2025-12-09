@@ -1,4 +1,5 @@
-import createSWCPlugin from "@codepress/codepress-engine/swc";
+import { createSWCPlugin } from "@codepress/codepress-engine/swc";
+import CodePressWebpackPlugin from "@codepress/codepress-engine/webpack-plugin";
 import type { NextConfig } from "next";
 
 const nextConfig: NextConfig = {
@@ -13,6 +14,10 @@ const nextConfig: NextConfig = {
   },
   reactStrictMode: true,
   transpilePackages: ["@quantfive/codepress-browser-extension"],
+  webpack: (config, { isServer, dev }) => {
+    config.plugins.push(new CodePressWebpackPlugin({ isServer, dev }));
+    return config;
+  },
   images: {
     remotePatterns: [
       {
