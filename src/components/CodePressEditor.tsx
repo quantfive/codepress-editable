@@ -1,5 +1,14 @@
-import { CodePressEditor as Editor } from "@quantfive/codepress-browser-extension";
-import { useEffect, useState } from "react";
+import dynamic from "next/dynamic";
+import { useEffect } from "react";
+
+// eslint-disable-next-line @typescript-eslint/no-explicit-any
+const Editor: any = dynamic(
+  () =>
+    import("@quantfive/codepress-browser-extension").then(
+      (mod) => mod.CodePressEditor
+    ),
+  { ssr: false }
+);
 
 const CODEPRESS_EDITOR_API_BASE_URL =
   process.env.NODE_ENV === "production"
@@ -7,12 +16,6 @@ const CODEPRESS_EDITOR_API_BASE_URL =
     : "http://localhost:8007/v1";
 
 export function CodePressEditor() {
-  const [mounted, setMounted] = useState(false);
-
-  useEffect(() => {
-    setMounted(true);
-  }, []);
-
   useEffect(() => {
     if (typeof window !== "undefined") {
       try {
@@ -25,11 +28,6 @@ export function CodePressEditor() {
       }
     }
   }, []);
-
-  // Don't render on server-side
-  if (!mounted) {
-    return null;
-  }
 
   const tokenProvider = async () => {
     // You can add authentication token logic here if needed
