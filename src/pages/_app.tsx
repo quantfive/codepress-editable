@@ -1,6 +1,7 @@
 import "@/styles/globals.css";
 import "@quantfive/codepress-browser-extension/style";
 
+import { CPRefreshProvider } from "@codepress/codepress-engine/refresh-provider";
 import type { NextPage } from "next";
 import type { AppProps } from "next/app";
 import type { ReactElement, ReactNode } from "react";
@@ -17,5 +18,9 @@ export default function App({ Component, pageProps }: AppPropsWithLayout) {
   // Use the layout defined at the page level, if available
   const getLayout = Component.getLayout ?? ((page) => page);
 
-  return getLayout(<Component {...pageProps} />);
+  return (
+    <CPRefreshProvider>
+      {getLayout(<Component {...pageProps} />)}
+    </CPRefreshProvider>
+  );
 }
