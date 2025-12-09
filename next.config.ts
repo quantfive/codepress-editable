@@ -12,6 +12,7 @@ const nextConfig: NextConfig = {
     ],
   },
   reactStrictMode: true,
+  transpilePackages: ["@quantfive/codepress-browser-extension"],
   images: {
     remotePatterns: [
       {
@@ -23,6 +24,10 @@ const nextConfig: NextConfig = {
         hostname: "avatars.githubusercontent.com",
       },
     ],
+  },
+  webpack: (config) => {
+    config.resolve.conditionNames = ["import", "module", "default"];
+    return config;
   },
 };
 
