@@ -113,8 +113,8 @@ const MobileMenu = ({
   if (!isOpen) return null;
 
   return (
-    <div className="md:hidden absolute top-full left-0 w-full bg-white shadow-md">
-      <div className="max-w-screen-xl mx-auto flex flex-col gap-4 p-4">
+    <div className="md:hidden absolute top-full left-0 w-full px-4 pb-4">
+      <div className="max-w-6xl mx-auto bg-white/70 backdrop-blur-md rounded-2xl shadow-sm border border-gray-200/50 flex flex-col gap-4 p-4">
         <nav className="flex flex-col gap-2">
           <NavLinks isMobile onLinkClick={onLinkClick} />
         </nav>
@@ -170,11 +170,12 @@ export default function Header() {
     <header
       ref={headerRef}
       className={cn(
-        "bg-white w-full sticky top-0 z-50 transition-transform duration-200",
+        "w-full sticky top-0 z-50 transition-transform duration-200 pt-4",
         !isHeaderVisible && "-translate-y-full"
       )}
     >
-      <div className="max-w-screen-xl mx-auto px-4 h-16 md:h-20 flex items-center justify-between">
+      <div className="max-w-6xl mx-auto px-4">
+        <div className="bg-white/70 backdrop-blur-md rounded-2xl shadow-sm border border-gray-200/50 px-4 h-16 md:h-20 flex items-center justify-between">
         <Link
           href="/"
           className="flex items-center gap-2"
@@ -213,6 +214,7 @@ export default function Header() {
               <Menu className="text-black size-6" />
             )}
           </Button>
+        </div>
         </div>
       </div>
 
