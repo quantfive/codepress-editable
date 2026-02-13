@@ -44,7 +44,7 @@ export default function FinalSection() {
       <div className="flex flex-col items-center gap-18 relative z-10 px-10 pt-12 md:pt-16 lg:pt-20 pb-4">
         <div className="flex flex-col items-center text-center gap-8 md:gap-12 lg:gap-16">
           <h2 className="text-4xl md:text-5xl lg:text-[56px] font-semibold tracking-tight leading-tight text-black">
-            Ready to ship without the backlog?
+            Ready to ship without the backlog??
           </h2>
           <Button
             variant="final"
