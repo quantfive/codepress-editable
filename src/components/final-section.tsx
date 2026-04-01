@@ -24,7 +24,7 @@ const Footer = () => (
           className="h-auto"
         />
         <p className="text-sm text-[#4b4b4b]">
-          Edit your live site like Figma—ship changes instantly
+          Visual editing for production sites—design and deploy in real-time
         </p>
       </div>
       <p className="text-sm text-[#4b4b4b]">
