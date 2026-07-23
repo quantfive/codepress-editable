@@ -1,0 +1,22 @@
+{
+  "schema_version": 1,
+  "bootstrapped_at": "2026-07-23T21:18:00Z",
+  "discovery_branch": "main",
+  "frontends": [
+    {
+      "label": "web",
+      "working_dir": "",
+      "dockerfile_path": ".codepress/dev-server/Dockerfile.web",
+      "dev_command": "pnpm dev",
+      "prebuild_command": "",
+      "prebuild_inputs": [],
+      "framework": "next",
+      "package_manager": "pnpm",
+      "install_command": "pnpm install --frozen-lockfile",
+      "dependency_manifests": ["pnpm-lock.yaml"],
+      "dev_port": 3000,
+      "system_packages": ["procps"],
+      "size": "medium"
+    }
+  ]
+}
